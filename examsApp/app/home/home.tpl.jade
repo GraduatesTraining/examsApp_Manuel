@@ -8,9 +8,5 @@ div(layout="row", ng-cloak)
             h5.toolbar-title CogniExams
             
         md-content(flex, md-scroll-y)
-            div(layout="column", layout-fill, layout-padding)
-                div(data-ui-view)
-                
-                   
-
-                
+            div.ui-view-container(layout="column", layout-fill, layout-padding)
+                div(ui-view="loginView")
