@@ -1,2 +1,11 @@
-h2 login
-p {{login.ctrlName}}
+md-card.main-layout(layout="column", layout-fill, layout-padding)
+    md-input-container.input-style
+        label Username
+        input(ng-model="username")
+    md-input-container.input-style
+        label Password
+        input(ng-model="password" type="password")
+        
+    div.button-container(layout="row", layout-fill, layout-padding)
+        md-button.md-raised.md-primary.login-button Login
+        md-button.md-raised.register-button Register
