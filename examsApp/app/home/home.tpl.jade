@@ -3,7 +3,7 @@ div(layout="row", ng-cloak)
         md-toolbar.md-whiteframe-20dp(layout="row")
             md-card-avatar
                 img.user-avatar(src="../images/cognizant.png")  
-            .username-title
+            h5 {{username}}
         md-content(flex, md-scroll-y)
             div(layout="column", layout-fill, layout-padding)
                 div(data-ui-view="loginView")
