@@ -3,10 +3,10 @@ div(layout="row", ng-cloak)
         md-toolbar.md-whiteframe-20dp(layout="row", layout-align="space-between center")
             h5 CogniExams
             
-    div.relative(layout="column", layout-fill, role="main")
+    .relative(layout="column", layout-fill, role="main")
         md-toolbar.md-whiteframe-20dp(layout="row", layout-align="space-between center")
             h5.toolbar-title CogniExams
             
         md-content(flex, md-scroll-y)
-            div.ui-view-container(layout="column", layout-fill, layout-padding)
-                div(ui-view="loginView")
+            div(layout="column", layout-fill, layout-padding)
+                div(data-ui-view)
