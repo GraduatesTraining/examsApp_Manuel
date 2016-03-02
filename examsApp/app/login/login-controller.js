@@ -12,17 +12,19 @@
     .module('login')
     .controller('LoginCtrl', LoginCtrl);
 
-  function LoginCtrl() {
-    var vm = this;
+  function LoginCtrl(Login, $scope) {
+    var vm = $scope;
     vm.ctrlName = 'LoginCtrl';
     vm.user = null;
     vm.submit = function (user) {
-      vm.user = angular.copy(user);
-      // to-do
+      if (user) {
+        Login.setUser(user);
+      }
     };
     vm.register = function (register) {
-      vm.user = angular.copy(register);
-      // to-do
+      if (register) {
+        Login.setUser(register);
+      }
     };
   }
 }());
