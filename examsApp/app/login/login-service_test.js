@@ -10,7 +10,10 @@ describe('Login', function () {
     service = Login;
   }));
 
-  it('should equal Login', function () {
-    expect(service.get()).toEqual('Login');
+  it('should have getUser function defined', function () {
+    expect(service.getUser).toBeDefined();
+  });
+  it('should have setUser function defined', function () {
+    expect(service.setUser).toBeDefined();
   });
 });
