@@ -5,7 +5,7 @@
         h5.username-tag {{username}}
     
     div(layout="row", flex)
-        md-sidenav.md-sidenav-left.md-whiteframe-z1(flex, layout="column", md-component-id="left", md-is-locked-open="true")
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(flex, layout="column", md-component-id="left", md-is-locked-open="$mdMedia('gt-md')")
             md-menu-item
                 md-button Exams
             md-divider
@@ -15,3 +15,5 @@
         md-content(flex, md-scroll-y)
             div(layout="column", layout-fill, layout-padding)
                 div(data-ui-view="mainView")
+    md-button.md-fab.md-primary.fab-button-style(ng-click="showSidenav()", aria-label="sidenav") =
+    
