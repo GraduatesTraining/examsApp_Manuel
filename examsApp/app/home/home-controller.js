@@ -12,10 +12,9 @@
     .module('home')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($state, Login, $scope) {
+  function HomeCtrl($state, $scope) {
     var vm = $scope;
     vm.username = null;
-    vm.ctrlName = 'HomeCtrl';
     $state.go('login');
   }
 }());
