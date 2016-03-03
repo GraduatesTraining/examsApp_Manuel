@@ -7,6 +7,6 @@ md-card.main-layout.md-whiteframe-10dp(layout="column", layout-fill, layout-padd
             label Password
             input(ng-model="user.password", type="password", required="")
             
-        div.button-container(layout="row", layout-fill, layout-padding)
+        .button-container(layout="row", layout-fill, layout-padding)
             md-button.md-raised.md-primary.login-button(ng-disabled="login.$invalid", type="submit") Login
             md-button.md-raised.register-button(ng-click="register()") Register
