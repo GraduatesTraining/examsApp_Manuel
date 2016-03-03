@@ -14,9 +14,6 @@
 
   function Login() {
     var self = this;
-    self.get = function () {
-      return 'Login';
-    };
     self.getUser = function () {
       return localStorage.username;
     };

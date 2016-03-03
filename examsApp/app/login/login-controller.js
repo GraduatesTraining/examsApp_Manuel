@@ -14,16 +14,16 @@
 
   function LoginCtrl(Login, $scope) {
     var vm = $scope;
-    vm.ctrlName = 'LoginCtrl';
-    vm.user = null;
     vm.submit = function (user) {
       if (user) {
         Login.setUser(user);
+        // to-do
       }
     };
     vm.register = function (register) {
       if (register) {
         Login.setUser(register);
+        // to-do
       }
     };
   }
