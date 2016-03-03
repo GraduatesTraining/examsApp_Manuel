@@ -1,0 +1,24 @@
+.image-exam{
+    width: 48px;
+    max-width: 100%;
+    margin: 8px 10px 8px 15px;
+}
+
+.title-exam{
+    margin-right: auto;   
+}
+
+.exam-content{
+    overflow: hidden;
+}
+
+.tile-style{
+    cursor: pointer;
+    &:hover{
+        border: white 6px solid;
+    }
+}
+
+.points-margin {
+    margin-right: 20px;
+}

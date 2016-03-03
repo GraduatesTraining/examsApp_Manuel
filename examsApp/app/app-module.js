@@ -13,6 +13,7 @@
       'ui.router',
       'home',
       'login',
-      'main'
+      'main',
+      'exams'
     ]);
 }());
