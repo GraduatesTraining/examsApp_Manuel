@@ -1,0 +1,27 @@
+.main-layout{
+    width: 300px;
+    margin-top:36px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-style{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div{
+    & .login-button{
+        margin-left: auto;
+    }
+    & .register-button{
+        margin-right: auto;
+    }
+    & .button-container{
+        margin-top: 40px;
+    }
+}
+
+label{
+    color: black !important;
+}

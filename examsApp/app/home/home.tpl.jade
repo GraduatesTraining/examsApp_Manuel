@@ -1,12 +1,8 @@
 div(layout="row", ng-cloak)
-    md-sidenav.md-whiteframe-20dp.md-sidenav-left(layout="column", md-component-id="left", md-is-locked-open="false")
-        md-toolbar.md-whiteframe-20dp(layout="row", layout-align="space-between center")
-            h5 CogniExams
-            
     .relative(layout="column", layout-fill, role="main")
-        md-toolbar.md-whiteframe-20dp(layout="row", layout-align="space-between center")
-            h5.toolbar-title CogniExams
-            
+        md-toolbar.md-whiteframe-20dp(layout="row")
+            md-card-avatar
+                img.main-avatar(src="../images/cognizant.png")  
         md-content(flex, md-scroll-y)
             div(layout="column", layout-fill, layout-padding)
-                div(data-ui-view)
+                div(data-ui-view="loginView")
