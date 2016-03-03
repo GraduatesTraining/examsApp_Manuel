@@ -12,6 +12,7 @@
       'ngMaterial',
       'ui.router',
       'home',
-      'login'
+      'login',
+      'main'
     ]);
 }());

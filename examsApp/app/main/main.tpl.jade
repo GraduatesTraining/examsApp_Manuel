@@ -1,0 +1,17 @@
+.relative(layout="column", layout-fill, role="main", flex)
+    md-toolbar.md-whiteframe-20dp(layout="row")
+        md-card-avatar
+            img.main-avatar(src="../images/cognizant.png")  
+        h5.username-tag {{username}}
+    
+    div(layout="row", flex)
+        md-sidenav.md-sidenav-left.md-whiteframe-z1(flex, layout="column", md-component-id="left", md-is-locked-open="true")
+            md-menu-item
+                md-button Exams
+            md-divider
+            md-menu-item
+                md-button Stats
+            md-divider
+        md-content(flex, md-scroll-y)
+            div(layout="column", layout-fill, layout-padding)
+                div(data-ui-view="mainView")

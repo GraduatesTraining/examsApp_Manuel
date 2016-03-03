@@ -12,13 +12,16 @@
     .module('login')
     .service('Login', Login);
 
-  function Login() {
+  function Login($state) {
     var self = this;
     self.getUser = function () {
       return localStorage.username;
     };
     self.setUser = function (user) {
       localStorage.username = user.username;
+    };
+    self.changeView = function (view) {
+      $state.go(view);
     };
   }
 }());
