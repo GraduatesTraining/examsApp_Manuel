@@ -2,21 +2,17 @@
 'use strict';
 
 describe('HomeCtrl', function () {
-  var $scope, $state;
+  var Login;
+  beforeEach(module('login'));
   beforeEach(module('home'));
-  beforeEach(inject(function ($controller, $rootScope, _$state_) {
-    $state = _$state_;
-    spyOn($state, 'go');
-    $scope = $rootScope.$new();
+  beforeEach(inject(function ($rootScope, $controller, _Login_) {
+    Login = _Login_;
+    spyOn(Login, 'changeView');
     $controller('HomeCtrl', {
-      $scope: $scope,
-      $state: $state
+      Login: Login
     });
   }));
-  it('should have username as null', function () {
-    expect($scope.username).toEqual(null);
-  });
-  it('should go to the login view', function () {
-    expect($state.go).toHaveBeenCalledWith('login');
+  it('should call to the changeView function', function () {
+    expect(Login.changeView).toHaveBeenCalledWith('login');
   });
 });

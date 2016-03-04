@@ -5,24 +5,24 @@ describe('LoginCtrl', function () {
   var $scope, Login;
 
   beforeEach(module('login'));
-
   beforeEach(inject(function ($rootScope, $controller, _Login_) {
     $scope = $rootScope.$new();
     Login = _Login_;
-    $controller('LoginCtrl', {
-      $scope: $scope
-    });
     spyOn(Login, 'setUser');
+    spyOn(Login, 'changeView');
+    $controller('LoginCtrl', {
+      $scope: $scope,
+      Login: Login
+    });
   }));
 
   it('should have defined submit function', function () {
     expect($scope.submit).toBeDefined();
-    $scope.submit('Test');
+    expect($scope.submit('Test')).toBe(true);
     expect(Login.setUser).toHaveBeenCalledWith('Test');
+    expect(Login.changeView).toHaveBeenCalledWith('main');
   });
-  it('should have defined register function', function () {
-    expect($scope.register).toBeDefined();
-    $scope.register('Test');
-    expect(Login.setUser).toHaveBeenCalledWith('Test');
+  it('should return false from submit when user is undefined', function () {
+    expect($scope.submit(undefined)).toBe(false);
   });
 });

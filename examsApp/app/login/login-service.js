@@ -1,4 +1,3 @@
-/* global localStorage: false */
 (function () {
   'use strict';
 
@@ -12,13 +11,13 @@
     .module('login')
     .service('Login', Login);
 
-  function Login($state) {
+  function Login($state, localStorageService) {
     var self = this;
     self.getUser = function () {
-      return localStorage.username;
+      return localStorageService.get('username');
     };
     self.setUser = function (user) {
-      localStorage.username = user.username;
+      localStorageService.set('username', user.username);
     };
     self.changeView = function (view) {
       $state.go(view);

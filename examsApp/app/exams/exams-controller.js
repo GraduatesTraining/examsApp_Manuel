@@ -12,7 +12,7 @@
     .module('exams')
     .controller('ExamsCtrl', ExamsCtrl);
 
-  function ExamsCtrl($scope, $http) {
+  function ExamsCtrl($scope) {
     var vm = $scope;
     vm.subjects = [
       {
