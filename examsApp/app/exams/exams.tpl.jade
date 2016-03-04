@@ -1,6 +1,6 @@
 md-content.exam-content(layout-padding)
     md-grid-list(md-cols="1", md-row-height="6rem")
-        md-grid-tile.tile-style(ng-repeat="subject in subjects", ng-style="{'background': subject.color}")
+        md-grid-tile.tile-style(ng-click="createExam(subject.title)", ng-repeat="subject in subjects", ng-style="{'background': subject.color}")
             md-card-avatar
                 img.image-exam(ng-src="{{subject.icon}}")  
             .title-exam {{subject.title}}

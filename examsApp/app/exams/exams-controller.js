@@ -12,7 +12,7 @@
     .module('exams')
     .controller('ExamsCtrl', ExamsCtrl);
 
-  function ExamsCtrl($scope) {
+  function ExamsCtrl($scope, Exam, $state) {
     var vm = $scope;
     vm.subjects = [
       {
@@ -47,5 +47,14 @@
         exams: 3,
         completed: 0
       }];
+    vm.createExam = function (subject) {
+      console.log('IN');
+      if (subject) {
+        Exam.setSubject(subject);
+        $state.go('question');
+        return true;
+      }
+      return false;
+    };
   }
 }());

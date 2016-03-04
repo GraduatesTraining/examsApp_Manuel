@@ -14,6 +14,7 @@
       'home',
       'login',
       'main',
-      'exams'
+      'exams',
+      'question'
     ]);
 }());
