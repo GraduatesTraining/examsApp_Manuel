@@ -18,7 +18,9 @@
       if (user) {
         Login.setUser(user);
         Login.changeView('main');
+        return true;
       }
+      return false;
     };
   }
 }());

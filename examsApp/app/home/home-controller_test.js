@@ -1,16 +1,18 @@
-/* global describe, beforeEach, it, expect, inject, module */
+/* global describe, beforeEach, it, expect, inject, module, spyOn */
 'use strict';
 
 describe('HomeCtrl', function () {
-  var ctrl;
-
+  var Login;
+  beforeEach(module('login'));
   beforeEach(module('home'));
-
-  beforeEach(inject(function ($rootScope, $controller) {
-    ctrl = $controller('HomeCtrl');
+  beforeEach(inject(function ($rootScope, $controller, _Login_) {
+    Login = _Login_;
+    spyOn(Login, 'changeView');
+    $controller('HomeCtrl', {
+      Login: Login
+    });
   }));
-
-  it('should have ctrlName as HomeCtrl', function () {
-    expect(ctrl.ctrlName).toEqual('HomeCtrl');
+  it('should call to the changeView function', function () {
+    expect(Login.changeView).toHaveBeenCalledWith('login');
   });
 });

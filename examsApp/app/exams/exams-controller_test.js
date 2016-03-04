@@ -2,15 +2,18 @@
 'use strict';
 
 describe('ExamsCtrl', function () {
-  var ctrl;
+  var $scope;
 
   beforeEach(module('exams'));
 
   beforeEach(inject(function ($rootScope, $controller) {
-    ctrl = $controller('ExamsCtrl');
+    $scope = $rootScope.$new();
+    $controller('ExamsCtrl', {
+      $scope: $scope
+    });
   }));
 
-  it('should have ctrlName as ExamsCtrl', function () {
-    expect(ctrl.ctrlName).toEqual('ExamsCtrl');
+  it('should have subjects defined', function () {
+    expect($scope.subjects).toBeDefined();
   });
 });

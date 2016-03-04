@@ -8,6 +8,7 @@
    */
   angular
     .module('login', [
-      'ui.router'
+      'ui.router',
+      'LocalStorageModule'
     ]);
 }());
