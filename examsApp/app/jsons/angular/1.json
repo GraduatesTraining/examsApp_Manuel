@@ -1,0 +1,10 @@
+[
+	{
+		"question": "What is angular?",
+		"description": "Desription",
+		"opt1": "A framework",
+		"options": ["A framework", "A person", "A dog", "All are corrects"],
+		"solution": 0
+	}
+]
+	

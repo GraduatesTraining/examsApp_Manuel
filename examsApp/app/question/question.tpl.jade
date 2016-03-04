@@ -1,2 +1,18 @@
-h2 question
-p {{question.ctrlName}}
+md-card.md-whiteframe-10dp(layout="column")
+    md-content(layout-padding)
+        h2 Question
+        p Description
+        p Questions
+        div(flex="50")
+            md-checkbox Option 1
+        div(flex="50")
+            md-checkbox Option 2
+        div(flex="50")
+            md-checkbox Option 3
+        div(flex="50")
+            md-checkbox Option 4
+    md-divider
+    md-content.button-section(layout="row", layout-padding)
+        md-button.md-raised.register-button(flex) Review
+        md-button.md-raised.register-button(flex) Next
+    

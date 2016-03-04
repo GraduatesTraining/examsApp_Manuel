@@ -12,8 +12,9 @@
     .module('question')
     .controller('QuestionCtrl', QuestionCtrl);
 
-  function QuestionCtrl() {
+  function QuestionCtrl($http) {
     var vm = this;
     vm.ctrlName = 'QuestionCtrl';
+    // $http.get('jsons/angular/1.json');
   }
 }());
