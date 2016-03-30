@@ -48,7 +48,6 @@
         completed: 0
       }];
     vm.createExam = function (subject) {
-      console.log('IN');
       if (subject) {
         Exam.setSubject(subject);
         $state.go('question');
